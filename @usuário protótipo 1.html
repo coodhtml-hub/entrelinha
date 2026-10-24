@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f1">
+  <title>Perfil de leitor — Entrelinhas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+  <link rel="stylesheet" href="@usuário protótipo 1.css">
+  <script src="@usuário protótipo 1.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Navegação da conta -->
+    <aside class="sidebar">
+      <a class="logo" href="entrelinha protótipo teste 2.html">entre<span>.</span>linhas</a>
+      <div class="profile-mini"><div class="avatar owner-avatar">MC</div><div><strong>Marina Costa</strong><small>@marinalê</small></div></div>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <a href="entrelinha protótipo teste 2.html"><span class="material-symbols-outlined">space_dashboard</span>Início</a>
+        <a href="#estante"><span class="material-symbols-outlined">auto_stories</span>Minha estante</a>
+        <a class="selected" href="entrelinha protótipo teste 2.html"><span class="material-symbols-outlined">group</span>Amigos</a>
+        <a href="#descobrir"><span class="material-symbols-outlined">explore</span>Descobrir</a>
+      </nav>
+      <div class="sidebar-note"><span class="material-symbols-outlined">local_cafe</span><p>Boas histórias ficam ainda melhores quando compartilhadas.</p></div>
+      <div class="sidebar-bottom"><span class="avatar owner-avatar small-avatar">MC</span><span>Marina Costa</span><span class="material-symbols-outlined more">more_horiz</span></div>
+    </aside>
+
+    <!-- Perfil de leitor -->
+    <main class="main">
+      <header class="topbar">
+        <a class="back-link" href="entrelinha protótipo teste 2.html"><span class="material-symbols-outlined">arrow_back</span>Voltar para amigos</a>
+        <button class="icon-button" aria-label="Mais opções" title="Mais opções"><span class="material-symbols-outlined">more_horiz</span></button>
+      </header>
+
+      <!-- Apresentação da pessoa -->
+      <section class="profile-hero">
+        <div class="profile-cover"></div>
+        <div class="profile-main">
+          <div class="reader-avatar" id="profileAvatar">LM</div>
+          <div class="profile-identity">
+            <div class="name-line"><h1 id="profileName">Luiza Martins</h1><span class="verified material-symbols-outlined" title="Perfil da comunidade">auto_awesome</span></div>
+            <div class="username" id="profileUsername">@luizamartins</div>
+            <p class="profile-bio" id="profileBio">Sempre com um romance na bolsa. Leitora de finais felizes.</p>
+            <div class="profile-meta"><span><span class="material-symbols-outlined">calendar_month</span><span id="joinedDate">Por aqui desde março de 2025</span></span><span><span class="material-symbols-outlined">location_on</span>Brasil</span></div>
+          </div>
+          <div class="profile-actions"><button class="button follow-button" id="followButton"><span class="material-symbols-outlined">person_add</span><span>Seguir</span></button><button class="button message-button" id="messageButton"><span class="material-symbols-outlined">mail</span><span>Mensagem</span></button></div>
+        </div>
+        <div class="profile-stats"><div><strong id="readCount">24</strong><span>livros lidos</span></div><div><strong id="reviewCount">18</strong><span>comentários</span></div><div><strong id="friendCount">36</strong><span>amigos</span></div></div>
+      </section>
+
+      <!-- Leitura em andamento -->
+      <section class="currently-reading">
+        <div class="current-icon"><span class="material-symbols-outlined">auto_stories</span></div>
+        <div class="current-copy"><span class="section-label">LENDO AGORA</span><h2 id="currentBook">Tudo é rio</h2><p id="currentAuthor">Carla Madeira · começou há 4 dias</p></div>
+        <div class="current-progress"><div class="progress-copy"><span>Progresso</span><strong id="currentProgressText">68%</strong></div><div class="progress-track"><i id="currentProgress"></i></div></div>
+        <div class="current-cover" id="currentCover">TUDO<br>É RIO</div>
+      </section>
+
+      <!-- Estante e comentários -->
+      <section class="library-section" id="estante">
+        <div class="section-header"><div><div class="section-label">UM POUCO DA ESTANTE</div><h2>Livros e impressões</h2></div><span class="book-total"><span class="material-symbols-outlined">library_books</span><span id="libraryTotal">24 livros</span></span></div>
+        <div class="library-tabs" role="tablist" aria-label="Filtrar livros do perfil">
+          <button class="library-tab active" data-filter="all" role="tab" aria-selected="true">Tudo</button>
+          <button class="library-tab" data-filter="read" role="tab" aria-selected="false">Já leu</button>
+          <button class="library-tab" data-filter="reviewed" role="tab" aria-selected="false">Com comentários</button>
+        </div>
+        <div class="book-list" id="bookList"></div>
+        <div class="empty-books" id="emptyBooks" hidden><span class="material-symbols-outlined">auto_stories</span><p>Nenhum livro nessa seleção por enquanto.</p></div>
+      </section>
+
+      <!-- Nota de privacidade -->
+      <div class="privacy-note"><span class="material-symbols-outlined">visibility</span><span>Você está vendo os livros e comentários que este perfil escolheu compartilhar.</span></div>
+      <footer class="page-footer">Entrelinhas <span>·</span> Histórias que a gente compartilha.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

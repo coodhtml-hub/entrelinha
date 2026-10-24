@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <title>Amigos — Entrelinhas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+  <link rel="stylesheet" href="entrelinha protótipo teste 2.css">
+  <script src="entrelinha protótipo teste 2.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Navegação da conta -->
+    <aside class="sidebar">
+      <a class="logo" href="#inicio">entre<span>.</span>linhas</a>
+      <div class="profile-mini">
+        <div class="avatar avatar-owner">MC</div>
+        <div><strong>Marina Costa</strong><small>@marinalê</small></div>
+      </div>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <a href="#inicio"><span class="material-symbols-outlined">space_dashboard</span>Início</a>
+        <a href="#estante"><span class="material-symbols-outlined">auto_stories</span>Minha estante</a>
+        <a class="selected" href="#amigos" aria-current="page"><span class="material-symbols-outlined">group</span>Amigos <span class="nav-count" id="navFriendCount">3</span></a>
+        <a href="#descobrir"><span class="material-symbols-outlined">explore</span>Descobrir</a>
+      </nav>
+      <div class="sidebar-note"><span class="material-symbols-outlined">local_cafe</span><p>Boas histórias ficam ainda melhores quando compartilhadas.</p></div>
+      <div class="sidebar-bottom"><span class="avatar avatar-owner small-avatar">MC</span><span>Marina Costa</span><span class="material-symbols-outlined more">more_horiz</span></div>
+    </aside>
+
+    <!-- Área principal de amigos -->
+    <main class="main" id="amigos">
+      <header class="topbar">
+        <div class="breadcrumb">Sua comunidade <span>/</span> Amigos</div>
+        <button class="icon-button" aria-label="Notificações" title="Notificações"><span class="material-symbols-outlined">notifications</span><i></i></button>
+      </header>
+
+      <section class="page-intro">
+        <div class="intro-copy">
+          <div class="eyebrow"><span class="material-symbols-outlined">diversity_3</span> LEITURAS COMPARTILHADAS</div>
+          <h1>Gente que lê<br><em>com você.</em></h1>
+          <p>Encontre seus amigos, acompanhe as leituras deles e descubra novas histórias pelo caminho.</p>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="art-circle"></div>
+          <div class="art-book book-a"><span>clubinho<br>do livro</span><i></i></div>
+          <div class="art-book book-b"><span>leituras<br>compartilhadas</span><i></i></div>
+          <div class="art-book book-c"><span>histórias<br>que juntam</span><i></i></div>
+          <span class="material-symbols-outlined art-spark">auto_awesome</span>
+        </div>
+      </section>
+
+      <!-- Busca por nome ou nome de usuário -->
+      <section class="search-panel" aria-label="Buscar pessoas">
+        <div class="search-heading"><div><h2>Encontre sua galerinha</h2><p>Busque pelo nome ou pelo @ de quem você quer acompanhar.</p></div><span class="material-symbols-outlined search-people-icon">person_search</span></div>
+        <label class="search-box" for="peopleSearch">
+          <span class="material-symbols-outlined">search</span>
+          <input id="peopleSearch" type="search" placeholder="Buscar por nome ou @usuário" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <div class="search-hint"><span class="material-symbols-outlined">lock</span> Você só encontra perfis que escolheram aparecer na comunidade.</div>
+      </section>
+
+      <!-- Abas da comunidade -->
+      <section class="community-section">
+        <div class="section-heading">
+          <div><div class="eyebrow">SUA REDE DE LEITURA</div><h2 id="listTitle">Seus amigos</h2></div>
+          <button class="text-button" id="inviteButton"><span class="material-symbols-outlined">person_add</span>Convidar alguém</button>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Seções de amigos">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="friends">Meus amigos <span id="friendsTabCount">3</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="requests">Solicitações <span id="requestsTabCount">2</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="discover">Descobrir pessoas</button>
+        </div>
+        <div class="list-toolbar"><p id="resultSummary">Pessoas que fazem parte da sua jornada de leitura.</p><button class="sort-button" id="sortButton"><span class="material-symbols-outlined">sort</span> Mais recentes</button></div>
+        <div class="people-grid" id="peopleGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><span class="material-symbols-outlined">person_search</span><h3>Ninguém por aqui ainda</h3><p>Tente outro nome ou confira a aba de sugestões.</p></div>
+      </section>
+
+      <!-- Lembrete de privacidade e convivência -->
+      <aside class="community-tip"><span class="material-symbols-outlined">auto_awesome</span><div><strong>Uma comunidade do seu jeito</strong><p>Você escolhe quem acompanhar. Seus registros e comentários ficam no seu espaço.</p></div><a href="#privacidade" aria-label="Saiba mais sobre privacidade"><span class="material-symbols-outlined">arrow_forward</span></a></aside>
+      <footer class="page-footer">Entrelinhas <span>·</span> Histórias que a gente compartilha.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
